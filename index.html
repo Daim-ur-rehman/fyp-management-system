@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>FYP Records Management System</title>
+    <link rel="stylesheet" href="styles/main.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+</head>
+<body>
+    <div class="app-container">
+        <nav class="sidebar">
+            <div class="sidebar-header">
+                <img src="assets/logo.svg" alt="Logo" class="logo">
+                <h1>FYP Records</h1>
+            </div>
+            <ul class="nav-links">
+                <li><a href="index.html" class="active"><i class="fas fa-home"></i> Home</a></li>
+                <li><a href="pages/dashboard.html"><i class="fas fa-chart-line"></i> Dashboard</a></li>
+                <li><a href="pages/projects.html"><i class="fas fa-project-diagram"></i> Projects</a></li>
+                <li><a href="pages/communication.html"><i class="fas fa-comments"></i> Communication</a></li>
+                <li><a href="pages/documents.html"><i class="fas fa-file-alt"></i> Documents</a></li>
+                <li><a href="pages/evaluation.html"><i class="fas fa-star"></i> Evaluation</a></li>
+                <li><a href="pages/similarity.html"><i class="fas fa-copy"></i> Similarity Check</a></li>
+                <li><a href="pages/ai-tools.html"><i class="fas fa-robot"></i> AI Tools</a></li>
+                <li><a href="pages/settings.html"><i class="fas fa-cog"></i> Settings</a></li>
+            </ul>
+            <div class="sidebar-footer">
+                <a href="pages/profile.html" class="profile-link">
+                    <div class="profile-info">
+                        <img src="assets/avatar-placeholder.png" alt="Profile" class="avatar">
+                        <div class="profile-text">
+                            <span class="name">John Doe</span>
+                            <span class="role">Student</span>
+                        </div>
+                    </div>
+                </a>
+            </div>
+        </nav>
+        <main class="main-content">
+            <header class="top-bar">
+                <div class="search-bar">
+                    <i class="fas fa-search"></i>
+                    <input type="text" placeholder="Search...">
+                </div>
+                <div class="top-bar-actions">
+                    <button class="notification-btn">
+                        <i class="fas fa-bell"></i>
+                        <span class="notification-badge">3</span>
+                    </button>
+                    <button class="help-btn">
+                        <i class="fas fa-question-circle"></i>
+                    </button>
+                </div>
+            </header>
+            <div class="content-area">
+                <!-- Content will be dynamically loaded here -->
+                <div class="welcome-section">
+                    <h1>Welcome to FYP Records Management System</h1>
+                    <p>Manage your final year projects efficiently and effectively.</p>
+                    <div class="quick-stats">
+                        <div class="stat-card">
+                            <h3>24</h3>
+                            <p>Total Projects</p>
+                        </div>
+                        <div class="stat-card">
+                            <h3>12</h3>
+                            <p>Active Projects</p>
+                        </div>
+                        <div class="stat-card">
+                            <h3>8</h3>
+                            <p>Completed</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </main>
+    </div>
+    <script src="js/main.js"></script>
+</body>
+</html> 

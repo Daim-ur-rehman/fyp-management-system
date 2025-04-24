@@ -1,0 +1,525 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Student Dashboard - FYP Records Management System</title>
+    <link rel="stylesheet" href="../../styles/main.css">
+    <link rel="stylesheet" href="../../styles/dashboard.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+</head>
+<body>
+    <div class="app-container">
+        <nav class="sidebar">
+            <div class="sidebar-header">
+                <img src="../../assets/logo.svg" alt="Logo" class="logo">
+                <h1>FYP Records</h1>
+            </div>
+            <ul class="nav-links">
+                <li><a href="dashboard.html" class="active"><i class="fas fa-home"></i> Dashboard</a></li>
+                <li><a href="project.html"><i class="fas fa-project-diagram"></i> My Project</a></li>
+                <li><a href="tasks.html"><i class="fas fa-tasks"></i> Tasks</a></li>
+                <li><a href="meetings.html"><i class="fas fa-calendar"></i> Meetings</a></li>
+                <li><a href="documents.html"><i class="fas fa-file-alt"></i> Documents</a></li>
+                <li><a href="messages.html"><i class="fas fa-comments"></i> Messages</a></li>
+            </ul>
+            <div class="sidebar-footer">
+                <a href="../profile.html" class="profile-link">
+                    <div class="profile-info">
+                        <img src="../../assets/avatar-placeholder.png" alt="Student" class="avatar">
+                        <div class="profile-text">
+                            <span class="name">John Smith</span>
+                            <span class="role">Student</span>
+                        </div>
+                    </div>
+                </a>
+            </div>
+        </nav>
+        <main class="main-content">
+            <header class="top-bar">
+                <div class="search-bar">
+                    <i class="fas fa-search"></i>
+                    <input type="text" placeholder="Search...">
+                </div>
+                <div class="top-bar-actions">
+                    <button class="notification-btn">
+                        <i class="fas fa-bell"></i>
+                        <span class="notification-badge">2</span>
+                    </button>
+                    <button class="help-btn">
+                        <i class="fas fa-question-circle"></i>
+                    </button>
+                </div>
+            </header>
+            <div class="content-area">
+                <div class="dashboard-header">
+                    <h1>Welcome back, John!</h1>
+                    <div class="project-status">
+                        <span class="status-badge success">On Track</span>
+                    </div>
+                </div>
+
+                <div class="project-progress-card dashboard-card">
+                    <div class="card-header">
+                        <h2>Project Progress</h2>
+                        <div class="progress-percentage">65%</div>
+                    </div>
+                    <div class="progress-timeline">
+                        <div class="timeline-item completed">
+                            <div class="timeline-point"></div>
+                            <div class="timeline-content">
+                                <h3>Project Proposal</h3>
+                                <p>Completed on Oct 15, 2023</p>
+                            </div>
+                        </div>
+                        <div class="timeline-item completed">
+                            <div class="timeline-point"></div>
+                            <div class="timeline-content">
+                                <h3>Initial Research</h3>
+                                <p>Completed on Nov 20, 2023</p>
+                            </div>
+                        </div>
+                        <div class="timeline-item current">
+                            <div class="timeline-point"></div>
+                            <div class="timeline-content">
+                                <h3>Development Phase</h3>
+                                <p>In Progress - Due Jan 15, 2024</p>
+                            </div>
+                        </div>
+                        <div class="timeline-item">
+                            <div class="timeline-point"></div>
+                            <div class="timeline-content">
+                                <h3>Testing & Documentation</h3>
+                                <p>Starts Feb 1, 2024</p>
+                            </div>
+                        </div>
+                        <div class="timeline-item">
+                            <div class="timeline-point"></div>
+                            <div class="timeline-content">
+                                <h3>Final Submission</h3>
+                                <p>Due Mar 15, 2024</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="dashboard-grid">
+                    <div class="dashboard-card">
+                        <div class="card-header">
+                            <h2>Upcoming Tasks</h2>
+                            <button class="btn btn-primary btn-sm">Add Task</button>
+                        </div>
+                        <div class="tasks-list">
+                            <div class="task-item">
+                                <div class="task-checkbox">
+                                    <input type="checkbox" id="task1">
+                                    <label for="task1"></label>
+                                </div>
+                                <div class="task-content">
+                                    <h3>Complete Database Schema</h3>
+                                    <p>Due in 2 days</p>
+                                </div>
+                                <div class="task-priority high">High</div>
+                            </div>
+                            <div class="task-item">
+                                <div class="task-checkbox">
+                                    <input type="checkbox" id="task2">
+                                    <label for="task2"></label>
+                                </div>
+                                <div class="task-content">
+                                    <h3>API Documentation</h3>
+                                    <p>Due in 5 days</p>
+                                </div>
+                                <div class="task-priority medium">Medium</div>
+                            </div>
+                            <div class="task-item">
+                                <div class="task-checkbox">
+                                    <input type="checkbox" id="task3">
+                                    <label for="task3"></label>
+                                </div>
+                                <div class="task-content">
+                                    <h3>Weekly Progress Report</h3>
+                                    <p>Due tomorrow</p>
+                                </div>
+                                <div class="task-priority urgent">Urgent</div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="dashboard-card">
+                        <div class="card-header">
+                            <h2>Upcoming Meetings</h2>
+                            <button class="btn btn-primary btn-sm">Schedule</button>
+                        </div>
+                        <div class="meetings-list">
+                            <div class="meeting-item">
+                                <div class="meeting-time">
+                                    <i class="fas fa-clock"></i>
+                                    <span>Today, 2:00 PM</span>
+                                </div>
+                                <div class="meeting-details">
+                                    <h3>Weekly Supervision</h3>
+                                    <p>with Dr. Sarah Wilson</p>
+                                </div>
+                                <button class="btn btn-secondary btn-sm">Join</button>
+                            </div>
+                            <div class="meeting-item">
+                                <div class="meeting-time">
+                                    <i class="fas fa-clock"></i>
+                                    <span>Tomorrow, 10:00 AM</span>
+                                </div>
+                                <div class="meeting-details">
+                                    <h3>Project Review</h3>
+                                    <p>with Project Panel</p>
+                                </div>
+                                <button class="btn btn-secondary btn-sm">Join</button>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="dashboard-card">
+                        <div class="card-header">
+                            <h2>Recent Documents</h2>
+                            <button class="btn btn-primary btn-sm">Upload</button>
+                        </div>
+                        <div class="documents-list">
+                            <div class="document-item">
+                                <i class="fas fa-file-pdf"></i>
+                                <div class="document-details">
+                                    <h3>Project Proposal v2.pdf</h3>
+                                    <p>Updated 2 days ago</p>
+                                </div>
+                                <button class="btn btn-icon">
+                                    <i class="fas fa-download"></i>
+                                </button>
+                            </div>
+                            <div class="document-item">
+                                <i class="fas fa-file-word"></i>
+                                <div class="document-details">
+                                    <h3>Research Notes.docx</h3>
+                                    <p>Updated 5 days ago</p>
+                                </div>
+                                <button class="btn btn-icon">
+                                    <i class="fas fa-download"></i>
+                                </button>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="dashboard-card">
+                        <div class="card-header">
+                            <h2>Supervisor Feedback</h2>
+                        </div>
+                        <div class="feedback-list">
+                            <div class="feedback-item">
+                                <div class="feedback-header">
+                                    <img src="../../assets/avatar-placeholder.png" alt="Supervisor" class="avatar-sm">
+                                    <div class="feedback-meta">
+                                        <h3>Dr. Sarah Wilson</h3>
+                                        <span>Yesterday</span>
+                                    </div>
+                                </div>
+                                <p class="feedback-content">
+                                    Good progress on the database design. Please consider adding indexes for better performance.
+                                    Let's discuss this in our next meeting.
+                                </p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </main>
+    </div>
+
+    <style>
+        /* Project Progress Timeline */
+        .project-progress-card {
+            margin-bottom: 2rem;
+        }
+
+        .progress-percentage {
+            font-size: 1.25rem;
+            font-weight: 600;
+            color: var(--primary-color);
+        }
+
+        .progress-timeline {
+            margin-top: 2rem;
+            position: relative;
+        }
+
+        .progress-timeline::before {
+            content: '';
+            position: absolute;
+            left: 15px;
+            top: 0;
+            bottom: 0;
+            width: 2px;
+            background-color: var(--background-dark);
+        }
+
+        .timeline-item {
+            display: flex;
+            gap: 1.5rem;
+            padding: 1rem 0;
+            position: relative;
+        }
+
+        .timeline-point {
+            width: 32px;
+            height: 32px;
+            background-color: var(--background-dark);
+            border-radius: 50%;
+            position: relative;
+            z-index: 1;
+        }
+
+        .timeline-item.completed .timeline-point {
+            background-color: var(--success-color);
+        }
+
+        .timeline-item.current .timeline-point {
+            background-color: var(--primary-color);
+            animation: pulse 2s infinite;
+        }
+
+        .timeline-content h3 {
+            font-size: 1rem;
+            margin-bottom: 0.25rem;
+        }
+
+        .timeline-content p {
+            font-size: 0.875rem;
+            color: var(--text-secondary);
+        }
+
+        /* Tasks List */
+        .tasks-list {
+            display: flex;
+            flex-direction: column;
+            gap: 1rem;
+        }
+
+        .task-item {
+            display: flex;
+            align-items: center;
+            gap: 1rem;
+            padding: 1rem;
+            background-color: var(--background-dark);
+            border-radius: var(--border-radius);
+        }
+
+        .task-checkbox input {
+            display: none;
+        }
+
+        .task-checkbox label {
+            width: 20px;
+            height: 20px;
+            border: 2px solid var(--text-secondary);
+            border-radius: 4px;
+            cursor: pointer;
+            display: block;
+            position: relative;
+        }
+
+        .task-checkbox input:checked + label::after {
+            content: '\f00c';
+            font-family: 'Font Awesome 6 Free';
+            font-weight: 900;
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            color: var(--primary-color);
+        }
+
+        .task-content {
+            flex: 1;
+        }
+
+        .task-content h3 {
+            font-size: 0.875rem;
+            margin-bottom: 0.25rem;
+        }
+
+        .task-content p {
+            font-size: 0.75rem;
+            color: var(--text-secondary);
+        }
+
+        .task-priority {
+            padding: 0.25rem 0.5rem;
+            border-radius: 1rem;
+            font-size: 0.75rem;
+            font-weight: 500;
+        }
+
+        .task-priority.urgent {
+            background-color: rgba(244, 67, 54, 0.1);
+            color: #F44336;
+        }
+
+        .task-priority.high {
+            background-color: rgba(255, 152, 0, 0.1);
+            color: #FF9800;
+        }
+
+        .task-priority.medium {
+            background-color: rgba(33, 150, 243, 0.1);
+            color: #2196F3;
+        }
+
+        /* Meetings List */
+        .meetings-list {
+            display: flex;
+            flex-direction: column;
+            gap: 1rem;
+        }
+
+        .meeting-item {
+            display: flex;
+            align-items: center;
+            gap: 1rem;
+            padding: 1rem;
+            background-color: var(--background-dark);
+            border-radius: var(--border-radius);
+        }
+
+        .meeting-time {
+            display: flex;
+            align-items: center;
+            gap: 0.5rem;
+            color: var(--text-secondary);
+            font-size: 0.875rem;
+        }
+
+        .meeting-details {
+            flex: 1;
+        }
+
+        .meeting-details h3 {
+            font-size: 0.875rem;
+            margin-bottom: 0.25rem;
+        }
+
+        .meeting-details p {
+            font-size: 0.75rem;
+            color: var(--text-secondary);
+        }
+
+        /* Documents List */
+        .documents-list {
+            display: flex;
+            flex-direction: column;
+            gap: 1rem;
+        }
+
+        .document-item {
+            display: flex;
+            align-items: center;
+            gap: 1rem;
+            padding: 1rem;
+            background-color: var(--background-dark);
+            border-radius: var(--border-radius);
+        }
+
+        .document-item i {
+            font-size: 1.5rem;
+            color: var(--primary-color);
+        }
+
+        .document-details {
+            flex: 1;
+        }
+
+        .document-details h3 {
+            font-size: 0.875rem;
+            margin-bottom: 0.25rem;
+        }
+
+        .document-details p {
+            font-size: 0.75rem;
+            color: var(--text-secondary);
+        }
+
+        .btn-icon {
+            width: 32px;
+            height: 32px;
+            padding: 0;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            border-radius: 50%;
+            background: none;
+            border: none;
+            color: var(--text-secondary);
+            cursor: pointer;
+            transition: all 0.3s ease;
+        }
+
+        .btn-icon:hover {
+            background-color: var(--background-light);
+            color: var(--primary-color);
+        }
+
+        /* Feedback List */
+        .feedback-list {
+            display: flex;
+            flex-direction: column;
+            gap: 1rem;
+        }
+
+        .feedback-item {
+            padding: 1rem;
+            background-color: var(--background-dark);
+            border-radius: var(--border-radius);
+        }
+
+        .feedback-header {
+            display: flex;
+            align-items: center;
+            gap: 1rem;
+            margin-bottom: 0.5rem;
+        }
+
+        .avatar-sm {
+            width: 32px;
+            height: 32px;
+            border-radius: 50%;
+        }
+
+        .feedback-meta {
+            flex: 1;
+        }
+
+        .feedback-meta h3 {
+            font-size: 0.875rem;
+            margin-bottom: 0.25rem;
+        }
+
+        .feedback-meta span {
+            font-size: 0.75rem;
+            color: var(--text-secondary);
+        }
+
+        .feedback-content {
+            font-size: 0.875rem;
+            color: var(--text-primary);
+            line-height: 1.5;
+        }
+
+        @keyframes pulse {
+            0% {
+                box-shadow: 0 0 0 0 rgba(0, 200, 83, 0.4);
+            }
+            70% {
+                box-shadow: 0 0 0 10px rgba(0, 200, 83, 0);
+            }
+            100% {
+                box-shadow: 0 0 0 0 rgba(0, 200, 83, 0);
+            }
+        }
+    </style>
+</body>
+</html> 

@@ -1,0 +1,387 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Supervisors - FYP Records Management System</title>
+    <link rel="stylesheet" href="../../styles/main.css">
+    <link rel="stylesheet" href="../../styles/dashboard.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+</head>
+<body>
+    <div class="app-container">
+        <nav class="sidebar">
+            <div class="sidebar-header">
+                <img src="../../assets/logo.svg" alt="Logo" class="logo">
+                <h1>FYP Records</h1>
+            </div>
+            <ul class="nav-links">
+                <li><a href="dashboard.html"><i class="fas fa-home"></i> Dashboard</a></li>
+                <li><a href="supervisors.html" class="active"><i class="fas fa-chalkboard-teacher"></i> Supervisors</a></li>
+                <li><a href="students.html"><i class="fas fa-user-graduate"></i> Students</a></li>
+                <li><a href="projects.html"><i class="fas fa-project-diagram"></i> Projects</a></li>
+                <li><a href="reviews.html"><i class="fas fa-clipboard-check"></i> Reviews</a></li>
+                <li><a href="meetings.html"><i class="fas fa-calendar"></i> Meetings</a></li>
+                <li><a href="documents.html"><i class="fas fa-file-alt"></i> Documents</a></li>
+                <li><a href="messages.html"><i class="fas fa-comments"></i> Messages</a></li>
+            </ul>
+            <div class="sidebar-footer">
+                <a href="../profile.html" class="profile-link">
+                    <div class="profile-info">
+                        <img src="../../assets/avatar-placeholder.png" alt="Coordinator" class="avatar">
+                        <div class="profile-text">
+                            <span class="name">Dr. James Anderson</span>
+                            <span class="role">FYP Coordinator</span>
+                        </div>
+                    </div>
+                </a>
+            </div>
+        </nav>
+        <main class="main-content">
+            <header class="top-bar">
+                <div class="search-bar">
+                    <i class="fas fa-search"></i>
+                    <input type="text" placeholder="Search supervisors...">
+                </div>
+                <div class="top-bar-actions">
+                    <button class="notification-btn">
+                        <i class="fas fa-bell"></i>
+                        <span class="notification-badge">6</span>
+                    </button>
+                    <button class="help-btn">
+                        <i class="fas fa-question-circle"></i>
+                    </button>
+                </div>
+            </header>
+            <div class="content-area">
+                <div class="page-header">
+                    <h1>Supervisors</h1>
+                    <div class="header-actions">
+                        <button class="btn btn-primary">
+                            <i class="fas fa-plus"></i> Add Supervisor
+                        </button>
+                    </div>
+                </div>
+
+                <div class="filters-bar">
+                    <div class="filter-group">
+                        <label>Status</label>
+                        <select>
+                            <option value="all">All Supervisors</option>
+                            <option value="active">Active</option>
+                            <option value="inactive">Inactive</option>
+                        </select>
+                    </div>
+                    <div class="filter-group">
+                        <label>Sort By</label>
+                        <select>
+                            <option value="name">Name</option>
+                            <option value="students">Number of Students</option>
+                            <option value="workload">Workload</option>
+                        </select>
+                    </div>
+                </div>
+
+                <div class="supervisors-grid">
+                    <div class="supervisor-card">
+                        <div class="supervisor-header">
+                            <img src="../../assets/avatar-placeholder.png" alt="Supervisor" class="supervisor-avatar">
+                            <div class="supervisor-info">
+                                <h3>Dr. Sarah Wilson</h3>
+                                <span class="supervisor-id">ID: SUP001</span>
+                            </div>
+                            <div class="supervisor-status success">Active</div>
+                        </div>
+                        <div class="supervisor-details">
+                            <div class="detail-item">
+                                <i class="fas fa-user-graduate"></i>
+                                <span>8 Students</span>
+                            </div>
+                            <div class="detail-item">
+                                <i class="fas fa-project-diagram"></i>
+                                <span>6 Active Projects</span>
+                            </div>
+                            <div class="detail-item">
+                                <i class="fas fa-clock"></i>
+                                <span>Last Update: 2 days ago</span>
+                            </div>
+                        </div>
+                        <div class="workload-section">
+                            <div class="workload-header">
+                                <span>Current Workload</span>
+                                <span>75%</span>
+                            </div>
+                            <div class="progress-bar">
+                                <div class="progress-fill" style="width: 75%"></div>
+                            </div>
+                        </div>
+                        <div class="supervisor-actions">
+                            <button class="btn btn-primary btn-sm">
+                                <i class="fas fa-eye"></i> View Details
+                            </button>
+                            <button class="btn btn-secondary btn-sm">
+                                <i class="fas fa-comment"></i> Message
+                            </button>
+                        </div>
+                    </div>
+
+                    <div class="supervisor-card">
+                        <div class="supervisor-header">
+                            <img src="../../assets/avatar-placeholder.png" alt="Supervisor" class="supervisor-avatar">
+                            <div class="supervisor-info">
+                                <h3>Dr. Michael Chen</h3>
+                                <span class="supervisor-id">ID: SUP002</span>
+                            </div>
+                            <div class="supervisor-status success">Active</div>
+                        </div>
+                        <div class="supervisor-details">
+                            <div class="detail-item">
+                                <i class="fas fa-user-graduate"></i>
+                                <span>6 Students</span>
+                            </div>
+                            <div class="detail-item">
+                                <i class="fas fa-project-diagram"></i>
+                                <span>5 Active Projects</span>
+                            </div>
+                            <div class="detail-item">
+                                <i class="fas fa-clock"></i>
+                                <span>Last Update: 1 day ago</span>
+                            </div>
+                        </div>
+                        <div class="workload-section">
+                            <div class="workload-header">
+                                <span>Current Workload</span>
+                                <span>60%</span>
+                            </div>
+                            <div class="progress-bar">
+                                <div class="progress-fill" style="width: 60%"></div>
+                            </div>
+                        </div>
+                        <div class="supervisor-actions">
+                            <button class="btn btn-primary btn-sm">
+                                <i class="fas fa-eye"></i> View Details
+                            </button>
+                            <button class="btn btn-secondary btn-sm">
+                                <i class="fas fa-comment"></i> Message
+                            </button>
+                        </div>
+                    </div>
+
+                    <div class="supervisor-card">
+                        <div class="supervisor-header">
+                            <img src="../../assets/avatar-placeholder.png" alt="Supervisor" class="supervisor-avatar">
+                            <div class="supervisor-info">
+                                <h3>Dr. Emily Brown</h3>
+                                <span class="supervisor-id">ID: SUP003</span>
+                            </div>
+                            <div class="supervisor-status warning">At Capacity</div>
+                        </div>
+                        <div class="supervisor-details">
+                            <div class="detail-item">
+                                <i class="fas fa-user-graduate"></i>
+                                <span>10 Students</span>
+                            </div>
+                            <div class="detail-item">
+                                <i class="fas fa-project-diagram"></i>
+                                <span>8 Active Projects</span>
+                            </div>
+                            <div class="detail-item">
+                                <i class="fas fa-clock"></i>
+                                <span>Last Update: 3 days ago</span>
+                            </div>
+                        </div>
+                        <div class="workload-section">
+                            <div class="workload-header">
+                                <span>Current Workload</span>
+                                <span>90%</span>
+                            </div>
+                            <div class="progress-bar">
+                                <div class="progress-fill warning" style="width: 90%"></div>
+                            </div>
+                        </div>
+                        <div class="supervisor-actions">
+                            <button class="btn btn-primary btn-sm">
+                                <i class="fas fa-eye"></i> View Details
+                            </button>
+                            <button class="btn btn-secondary btn-sm">
+                                <i class="fas fa-comment"></i> Message
+                            </button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </main>
+    </div>
+
+    <style>
+        /* Page Header */
+        .page-header {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            margin-bottom: 2rem;
+        }
+
+        .page-header h1 {
+            color: var(--text-primary);
+            font-size: 1.75rem;
+        }
+
+        /* Filters Bar */
+        .filters-bar {
+            display: flex;
+            gap: 1rem;
+            margin-bottom: 2rem;
+            padding: 1rem;
+            background-color: var(--background-light);
+            border-radius: var(--border-radius);
+            box-shadow: var(--shadow-sm);
+        }
+
+        .filter-group {
+            display: flex;
+            align-items: center;
+            gap: 0.5rem;
+        }
+
+        .filter-group label {
+            font-size: 0.875rem;
+            color: var(--text-secondary);
+        }
+
+        .filter-group select {
+            padding: 0.5rem;
+            border: 1px solid rgba(0,0,0,0.1);
+            border-radius: var(--border-radius);
+            background-color: var(--background-light);
+            color: var(--text-primary);
+            font-size: 0.875rem;
+        }
+
+        /* Supervisors Grid */
+        .supervisors-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 1.5rem;
+        }
+
+        .supervisor-card {
+            background-color: var(--background-light);
+            border-radius: var(--border-radius);
+            padding: 1.5rem;
+            box-shadow: var(--shadow-sm);
+        }
+
+        .supervisor-header {
+            display: flex;
+            align-items: center;
+            gap: 1rem;
+            margin-bottom: 1rem;
+        }
+
+        .supervisor-avatar {
+            width: 48px;
+            height: 48px;
+            border-radius: 50%;
+            object-fit: cover;
+        }
+
+        .supervisor-info {
+            flex: 1;
+        }
+
+        .supervisor-info h3 {
+            font-size: 1rem;
+            margin-bottom: 0.25rem;
+        }
+
+        .supervisor-id {
+            font-size: 0.75rem;
+            color: var(--text-secondary);
+        }
+
+        .supervisor-status {
+            padding: 0.25rem 0.5rem;
+            border-radius: 1rem;
+            font-size: 0.75rem;
+            font-weight: 500;
+        }
+
+        .supervisor-status.success {
+            background-color: rgba(0, 200, 83, 0.1);
+            color: var(--success-color);
+        }
+
+        .supervisor-status.warning {
+            background-color: rgba(255, 152, 0, 0.1);
+            color: #FF9800;
+        }
+
+        .supervisor-details {
+            display: flex;
+            flex-direction: column;
+            gap: 0.5rem;
+            margin-bottom: 1rem;
+        }
+
+        .detail-item {
+            display: flex;
+            align-items: center;
+            gap: 0.5rem;
+            font-size: 0.875rem;
+            color: var(--text-secondary);
+        }
+
+        .detail-item i {
+            width: 16px;
+            color: var(--primary-color);
+        }
+
+        .workload-section {
+            margin-bottom: 1rem;
+        }
+
+        .workload-header {
+            display: flex;
+            justify-content: space-between;
+            margin-bottom: 0.5rem;
+            font-size: 0.875rem;
+        }
+
+        .progress-bar {
+            height: 6px;
+            background-color: var(--background-dark);
+            border-radius: 3px;
+            overflow: hidden;
+        }
+
+        .progress-fill {
+            height: 100%;
+            background-color: var(--primary-color);
+            border-radius: 3px;
+            transition: width 0.3s ease;
+        }
+
+        .progress-fill.warning {
+            background-color: #FF9800;
+        }
+
+        .supervisor-actions {
+            display: flex;
+            gap: 0.5rem;
+        }
+
+        /* Responsive Design */
+        @media (max-width: 768px) {
+            .filters-bar {
+                flex-direction: column;
+                align-items: stretch;
+            }
+
+            .supervisors-grid {
+                grid-template-columns: 1fr;
+            }
+        }
+    </style>
+</body>
+</html> 

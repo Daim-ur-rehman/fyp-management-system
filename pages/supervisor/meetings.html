@@ -1,0 +1,422 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Meetings - FYP Records Management System</title>
+    <link rel="stylesheet" href="../../styles/main.css">
+    <link rel="stylesheet" href="../../styles/dashboard.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+</head>
+<body>
+    <div class="app-container">
+        <nav class="sidebar">
+            <div class="sidebar-header">
+                <img src="../../assets/logo.svg" alt="Logo" class="logo">
+                <h1>FYP Records</h1>
+            </div>
+            <ul class="nav-links">
+                <li><a href="dashboard.html"><i class="fas fa-home"></i> Dashboard</a></li>
+                <li><a href="students.html"><i class="fas fa-user-graduate"></i> My Students</a></li>
+                <li><a href="projects.html"><i class="fas fa-project-diagram"></i> Projects</a></li>
+                <li><a href="reviews.html"><i class="fas fa-clipboard-check"></i> Reviews</a></li>
+                <li><a href="meetings.html" class="active"><i class="fas fa-calendar"></i> Meetings</a></li>
+                <li><a href="documents.html"><i class="fas fa-file-alt"></i> Documents</a></li>
+                <li><a href="messages.html"><i class="fas fa-comments"></i> Messages</a></li>
+            </ul>
+            <div class="sidebar-footer">
+                <a href="../profile.html" class="profile-link">
+                    <div class="profile-info">
+                        <img src="../../assets/avatar-placeholder.png" alt="Supervisor" class="avatar">
+                        <div class="profile-text">
+                            <span class="name">Dr. Sarah Wilson</span>
+                            <span class="role">Supervisor</span>
+                        </div>
+                    </div>
+                </a>
+            </div>
+        </nav>
+        <main class="main-content">
+            <header class="top-bar">
+                <div class="search-bar">
+                    <i class="fas fa-search"></i>
+                    <input type="text" placeholder="Search meetings...">
+                </div>
+                <div class="top-bar-actions">
+                    <button class="notification-btn">
+                        <i class="fas fa-bell"></i>
+                        <span class="notification-badge">4</span>
+                    </button>
+                    <button class="help-btn">
+                        <i class="fas fa-question-circle"></i>
+                    </button>
+                </div>
+            </header>
+            <div class="content-area">
+                <div class="page-header">
+                    <h1>Meetings</h1>
+                    <div class="header-actions">
+                        <button class="btn btn-primary">
+                            <i class="fas fa-plus"></i> Schedule Meeting
+                        </button>
+                    </div>
+                </div>
+
+                <div class="meetings-container">
+                    <div class="meetings-sidebar">
+                        <div class="calendar-widget">
+                            <div class="calendar-header">
+                                <button class="btn btn-icon">
+                                    <i class="fas fa-chevron-left"></i>
+                                </button>
+                                <h3>March 2024</h3>
+                                <button class="btn btn-icon">
+                                    <i class="fas fa-chevron-right"></i>
+                                </button>
+                            </div>
+                            <div class="calendar-grid">
+                                <!-- Calendar days will be dynamically generated -->
+                            </div>
+                        </div>
+                        <div class="meeting-filters">
+                            <h3>Filters</h3>
+                            <div class="filter-group">
+                                <label>Status</label>
+                                <select>
+                                    <option value="all">All Meetings</option>
+                                    <option value="upcoming">Upcoming</option>
+                                    <option value="completed">Completed</option>
+                                </select>
+                            </div>
+                            <div class="filter-group">
+                                <label>Student</label>
+                                <select>
+                                    <option value="all">All Students</option>
+                                    <option value="john">John Smith</option>
+                                    <option value="emma">Emma Johnson</option>
+                                    <option value="michael">Michael Brown</option>
+                                </select>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="meetings-content">
+                        <div class="meetings-timeline">
+                            <div class="timeline-header">
+                                <h2>Today's Meetings</h2>
+                                <span class="date">March 15, 2024</span>
+                            </div>
+                            <div class="meeting-item">
+                                <div class="meeting-time">
+                                    <span class="time">10:00 AM</span>
+                                    <span class="duration">1 hour</span>
+                                </div>
+                                <div class="meeting-details">
+                                    <h3>Weekly Progress Review</h3>
+                                    <div class="meeting-meta">
+                                        <span class="student">
+                                            <i class="fas fa-user-graduate"></i>
+                                            John Smith
+                                        </span>
+                                        <span class="project">
+                                            <i class="fas fa-project-diagram"></i>
+                                            AI-Powered Analytics
+                                        </span>
+                                    </div>
+                                    <p class="meeting-description">
+                                        Review of last week's progress and discussion of next steps.
+                                    </p>
+                                </div>
+                                <div class="meeting-actions">
+                                    <button class="btn btn-primary btn-sm">
+                                        <i class="fas fa-video"></i> Join
+                                    </button>
+                                    <button class="btn btn-secondary btn-sm">
+                                        <i class="fas fa-edit"></i> Reschedule
+                                    </button>
+                                </div>
+                            </div>
+
+                            <div class="meeting-item">
+                                <div class="meeting-time">
+                                    <span class="time">2:00 PM</span>
+                                    <span class="duration">45 mins</span>
+                                </div>
+                                <div class="meeting-details">
+                                    <h3>Project Discussion</h3>
+                                    <div class="meeting-meta">
+                                        <span class="student">
+                                            <i class="fas fa-user-graduate"></i>
+                                            Emma Johnson
+                                        </span>
+                                        <span class="project">
+                                            <i class="fas fa-project-diagram"></i>
+                                            Blockchain Security
+                                        </span>
+                                    </div>
+                                    <p class="meeting-description">
+                                        Discussion of recent code updates and architecture decisions.
+                                    </p>
+                                </div>
+                                <div class="meeting-actions">
+                                    <button class="btn btn-primary btn-sm">
+                                        <i class="fas fa-video"></i> Join
+                                    </button>
+                                    <button class="btn btn-secondary btn-sm">
+                                        <i class="fas fa-edit"></i> Reschedule
+                                    </button>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="upcoming-meetings">
+                            <h2>Upcoming Meetings</h2>
+                            <div class="meeting-list">
+                                <div class="meeting-item">
+                                    <div class="meeting-date">
+                                        <span class="day">16</span>
+                                        <span class="month">Mar</span>
+                                    </div>
+                                    <div class="meeting-details">
+                                        <h3>Code Review Session</h3>
+                                        <div class="meeting-meta">
+                                            <span class="student">Michael Brown</span>
+                                            <span class="time">11:00 AM</span>
+                                        </div>
+                                    </div>
+                                    <button class="btn btn-icon">
+                                        <i class="fas fa-ellipsis-v"></i>
+                                    </button>
+                                </div>
+
+                                <div class="meeting-item">
+                                    <div class="meeting-date">
+                                        <span class="day">18</span>
+                                        <span class="month">Mar</span>
+                                    </div>
+                                    <div class="meeting-details">
+                                        <h3>Project Milestone Review</h3>
+                                        <div class="meeting-meta">
+                                            <span class="student">John Smith</span>
+                                            <span class="time">3:00 PM</span>
+                                        </div>
+                                    </div>
+                                    <button class="btn btn-icon">
+                                        <i class="fas fa-ellipsis-v"></i>
+                                    </button>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </main>
+    </div>
+
+    <style>
+        /* Meetings Container */
+        .meetings-container {
+            display: grid;
+            grid-template-columns: 300px 1fr;
+            gap: 2rem;
+        }
+
+        /* Calendar Widget */
+        .calendar-widget {
+            background-color: var(--background-light);
+            border-radius: var(--border-radius);
+            padding: 1.5rem;
+            box-shadow: var(--shadow-sm);
+            margin-bottom: 1.5rem;
+        }
+
+        .calendar-header {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            margin-bottom: 1rem;
+        }
+
+        .calendar-header h3 {
+            font-size: 1.25rem;
+            color: var(--text-primary);
+        }
+
+        .calendar-grid {
+            display: grid;
+            grid-template-columns: repeat(7, 1fr);
+            gap: 0.5rem;
+        }
+
+        /* Meeting Filters */
+        .meeting-filters {
+            background-color: var(--background-light);
+            border-radius: var(--border-radius);
+            padding: 1.5rem;
+            box-shadow: var(--shadow-sm);
+        }
+
+        .meeting-filters h3 {
+            font-size: 1.25rem;
+            color: var(--text-primary);
+            margin-bottom: 1rem;
+        }
+
+        /* Meetings Timeline */
+        .meetings-timeline {
+            background-color: var(--background-light);
+            border-radius: var(--border-radius);
+            padding: 1.5rem;
+            box-shadow: var(--shadow-sm);
+            margin-bottom: 1.5rem;
+        }
+
+        .timeline-header {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            margin-bottom: 1.5rem;
+        }
+
+        .timeline-header h2 {
+            font-size: 1.25rem;
+            color: var(--text-primary);
+        }
+
+        .date {
+            font-size: 0.875rem;
+            color: var(--text-secondary);
+        }
+
+        .meeting-item {
+            display: flex;
+            gap: 1.5rem;
+            padding: 1rem;
+            background-color: var(--background-dark);
+            border-radius: var(--border-radius);
+            margin-bottom: 1rem;
+        }
+
+        .meeting-time {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            min-width: 100px;
+        }
+
+        .time {
+            font-size: 1rem;
+            font-weight: 600;
+            color: var(--text-primary);
+        }
+
+        .duration {
+            font-size: 0.75rem;
+            color: var(--text-secondary);
+        }
+
+        .meeting-details {
+            flex: 1;
+        }
+
+        .meeting-details h3 {
+            font-size: 1rem;
+            margin-bottom: 0.5rem;
+        }
+
+        .meeting-meta {
+            display: flex;
+            gap: 1rem;
+            margin-bottom: 0.5rem;
+            font-size: 0.875rem;
+            color: var(--text-secondary);
+        }
+
+        .meeting-meta i {
+            margin-right: 0.25rem;
+        }
+
+        .meeting-description {
+            font-size: 0.875rem;
+            color: var(--text-secondary);
+        }
+
+        .meeting-actions {
+            display: flex;
+            gap: 0.5rem;
+        }
+
+        /* Upcoming Meetings */
+        .upcoming-meetings {
+            background-color: var(--background-light);
+            border-radius: var(--border-radius);
+            padding: 1.5rem;
+            box-shadow: var(--shadow-sm);
+        }
+
+        .upcoming-meetings h2 {
+            font-size: 1.25rem;
+            color: var(--text-primary);
+            margin-bottom: 1.5rem;
+        }
+
+        .meeting-list .meeting-item {
+            display: flex;
+            align-items: center;
+            gap: 1rem;
+            padding: 1rem;
+            background-color: var(--background-dark);
+            border-radius: var(--border-radius);
+            margin-bottom: 1rem;
+        }
+
+        .meeting-date {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            min-width: 60px;
+        }
+
+        .meeting-date .day {
+            font-size: 1.5rem;
+            font-weight: 600;
+            color: var(--primary-color);
+        }
+
+        .meeting-date .month {
+            font-size: 0.875rem;
+            color: var(--text-secondary);
+        }
+
+        /* Responsive Design */
+        @media (max-width: 1024px) {
+            .meetings-container {
+                grid-template-columns: 1fr;
+            }
+
+            .meetings-sidebar {
+                display: grid;
+                grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+                gap: 1.5rem;
+            }
+        }
+
+        @media (max-width: 768px) {
+            .meeting-item {
+                flex-direction: column;
+            }
+
+            .meeting-time {
+                flex-direction: row;
+                justify-content: space-between;
+                width: 100%;
+            }
+
+            .meeting-actions {
+                width: 100%;
+                justify-content: flex-end;
+            }
+        }
+    </style>
+</body>
+</html> 
