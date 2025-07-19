@@ -26,14 +26,7 @@ function Login() {
   };
 
   return (
-    <div className="auth-page" style={{
-      minHeight: '100vh',
-      background: 'url(/assets/cust.png) center center/cover no-repeat',
-      display: 'flex',
-      alignItems: 'center',
-      justifyContent: 'center',
-      padding: '2rem'
-    }}>
+    <div className="auth-page">
       <div className="auth-container">
         <div className="auth-card">
           <div className="auth-header">
@@ -43,20 +36,16 @@ function Login() {
           </div>
           <form className="auth-form" onSubmit={handleSubmit}>
             <div className="form-group">
-              <label className="form-label" htmlFor="email">
-                <img src="/assets/email.svg" alt="Email" style={{width: 20, height: 20, marginRight: 8, verticalAlign: 'middle'}} />
-                Email Address
-              </label>
+              <label className="form-label" htmlFor="email">Email Address</label>
               <div className="input-group">
+                <img src="/assets/email.svg" alt="Email" style={{width: 20, height: 20, marginRight: 8, verticalAlign: 'middle'}} />
                 <input type="email" id="email" name="email" className="form-control" placeholder="Enter your email" required value={email} onChange={e => setEmail(e.target.value)} />
               </div>
             </div>
             <div className="form-group">
-              <label className="form-label" htmlFor="password">
-                <img src="/assets/lock.svg" alt="Password" style={{width: 20, height: 20, marginRight: 8, verticalAlign: 'middle'}} />
-                Password
-              </label>
+              <label className="form-label" htmlFor="password">Password</label>
               <div className="input-group">
+                <img src="/assets/lock.svg" alt="Password" style={{width: 20, height: 20, marginRight: 8, verticalAlign: 'middle'}} />
                 <input type={showPassword ? 'text' : 'password'} id="password" name="password" className="form-control" placeholder="Enter your password" required value={password} onChange={e => setPassword(e.target.value)} />
                 <button type="button" className="password-toggle" onClick={() => setShowPassword(s => !s)}>
                   <img src={showPassword ? "/assets/eye-slash.svg" : "/assets/eye.svg"} alt="Toggle" style={{width: 20, height: 20}} />

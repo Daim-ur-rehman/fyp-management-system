@@ -3,8 +3,8 @@ min-height: 100vh;
 display: flex;
 align-items: center;
 justify-content: center;
-/* background: url('../assets/cust.png') center center/cover no-repeat; */
 padding: 2rem;
+background: url('../../assets/cust.png') center center/cover no-repeat;
 }
 
 .auth-container {
